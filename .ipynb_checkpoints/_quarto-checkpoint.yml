@@ -1,0 +1,146 @@
+format:
+  html:
+    highlight-style: solarized
+    theme:
+    - default
+    - html/custom.scss
+    toc: true
+project:
+  output-dir: docs
+  pre-render: scripts/prepare.py
+  preview:
+    port: 3333
+  resources:
+  - files/
+  type: website
+website:
+  favicon: files/favicon.ico
+  navbar:
+    background: '#fde68a'
+    pinned: true
+    right:
+    - syllabus.qmd
+    - menu:
+      - file: schedule/401.qmd
+        text: Section 401
+      - file: schedule/402.qmd
+        text: Section 402
+      text: Schedule
+    - file: content/index.qmd
+      text: Content
+    - menu:
+      - file: assignment/overview.qmd
+        text: Overview
+      - file: assignment/401/schedule.qmd
+        text: Section 401
+      - file: assignment/402/schedule.qmd
+        text: Section 402
+      text: Assignments
+    - file: resource/index.qmd
+      text: Resources
+    tools:
+    - icon: box-arrow-up-right
+      menu:
+      - text: GitHub
+        url: https://github.com/MUSA-550-Fall-2023
+      - text: Canvas
+        url: https://canvas.upenn.edu/courses/1740535
+      - text: Ed Discussion
+        url: https://edstem.org/us/courses/42616/discussion/
+  page-footer:
+    left: 'Content {{< fa brands creative-commons >}} {{< var course.copyright_year
+      >}} by [{{< var instructors.nick.name_no_title >}}]({{< var instructors.nick.url
+      >}}), Quarto layout adapted from [Andrew Heiss''s Data Visualization with R
+      course](https://github.com/andrewheiss/datavizs23.classes.andrewheiss.com) <br>
+
+      All content licensed under a {{< fa brands creative-commons >}}
+
+      {{< fa brands creative-commons-by >}} {{< fa brands creative-commons-nc >}}
+
+      [Creative Commons Attribution-NonCommercial 4.0 International license (CC BY-NC
+      4.0)](https://creativecommons.org/licenses/by-nc/4.0/)
+
+      '
+    right: 'Made with {{< fa brands python >}} and [Quarto](https://quarto.org/)<br>
+
+      [View the source at {{< fa brands github >}} GitHub]({{< var course.github >}})
+
+      '
+  page-navigation: true
+  sidebar:
+  - background: light
+    contents:
+    - content/index.qmd
+    - file: content/week-1/index.qmd
+      text: 1. Exploratory Data Science in Python
+    - file: content/week-2/index.qmd
+      text: 2. Data Visualization Fundamentals
+    search: false
+    style: docked
+    title: Content
+  - contents:
+    - contents:
+      - resource/index.qmd
+      - resource/python.qmd
+      section: Resources
+    - contents:
+      - resource/install.qmd
+      - resource/mamba.qmd
+      - resource/jupyter.qmd
+      - resource/common-issues.qmd
+      - resource/file-paths.qmd
+      section: Guides
+    - contents:
+      - file: cheatsheets/conda.pdf
+        text: Conda/mamba
+      - file: cheatsheets/python.pdf
+        text: Python
+      - file: cheatsheets/pandas.pdf
+        text: Pandas
+      - file: cheatsheets/matplotlib.pdf
+        text: Matplotlib
+      - file: cheatsheets/seaborn.pdf
+        text: Seaborn
+      section: Cheatsheets
+    title: Resources
+  - contents:
+    - file: assignment/401/schedule.qmd
+      text: Schedule
+    - file: assignment/401/assignment-1.qmd
+      text: Assignment 1
+    - file: assignment/401/assignment-2.qmd
+      text: Assignment 2
+    - file: assignment/401/assignment-3.qmd
+      text: Assignment 3
+    - file: assignment/401/assignment-4.qmd
+      text: Assignment 4
+    - file: assignment/401/assignment-5.qmd
+      text: Assignment 5
+    - file: assignment/401/assignment-6.qmd
+      text: Assignment 6
+    - file: assignment/401/final-project-proposal.qmd
+      text: Final Project Proposal
+    - file: assignment/401/final-project.qmd
+      text: Final Project
+    title: Assignments
+  - contents:
+    - file: assignment/402/schedule.qmd
+      text: Schedule
+    - file: assignment/402/assignment-1.qmd
+      text: Assignment 1
+    - file: assignment/402/assignment-2.qmd
+      text: Assignment 2
+    - file: assignment/402/assignment-3.qmd
+      text: Assignment 3
+    - file: assignment/402/assignment-4.qmd
+      text: Assignment 4
+    - file: assignment/402/assignment-5.qmd
+      text: Assignment 5
+    - file: assignment/402/assignment-6.qmd
+      text: Assignment 6
+    - file: assignment/402/final-project-proposal.qmd
+      text: Final Project Proposal
+    - file: assignment/402/final-project.qmd
+      text: Final Project
+    title: Assignments
+  title: Geospatial Data Science in Python
